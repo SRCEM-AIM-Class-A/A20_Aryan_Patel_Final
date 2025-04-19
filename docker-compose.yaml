@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  flask:
+    image: flask-app  # Use your pre-built Flask image
+    container_name: flask-container
+    ports:
+      - "5000:5000"  # Map Flask container port to host port 5000
+    networks:
+      - app-network
+    depends_on:
+      - django  # Ensure Flask starts after Django
+
+  django:
+    image: django-app  # Use your pre-built Django image
+    container_name: django-container
+    ports:
+      - "8001:8000"  # Map Django container port to host port 8000
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
