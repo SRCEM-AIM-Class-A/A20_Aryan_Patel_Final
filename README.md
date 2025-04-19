@@ -6,5 +6,6 @@ This project contains a **Flask application**, a **Django application**, and a *
 ---
 
 ## 🔧 Project Structure
-
+project-root/ 
+├── flask_app/ │ ├── app.py │ ├── requirements.txt │ └── Dockerfile ├── django_app/ │ ├── myproject/ │ ├── items/ │ ├── manage.py │ └── Dockerfile └── docker-compose.yml
 
